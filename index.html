@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+
+</head>
+
+<body>
+    <style>
+        section.body {
+            background-color: rgb(47, 47, 48);
+            transform: scale(0.5);
+            padding: 80px 40px;
+            align-items: center;
+            border-radius: 25px;
+        }
+
+        section.output input {
+            padding: 40px;
+            font-size: 40px;
+            text-align: right;
+            border-radius: 25px;
+            border: 2px solid white;
+            width: 800px;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            background-color: transparent;
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+        }
+
+        section.input {
+            width: 900px;
+            overflow: auto;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+        }
+
+        section.input input {
+            width: 200px;
+            height: 100px;
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            border: none;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        section.input input:hover {
+            background-color: whitesmoke;
+            color: rgb(0, 0, 0);
+        }
+
+        section.input input:last-child {
+            width: 600px;
+
+        }
+
+        body {
+            display: flex;
+        }
+
+        #erase {
+            width: 415px;
+        }
+    </style>
+    <section class="body">
+        <section class="output">
+            <input type="text" id="output">
+        </section>
+        <section class="input">
+            <input type="button" value="AC" onclick="document.getElementById('output').value = ''" id="erase">
+            <input type="button" value="DEL"
+                onclick=" document.getElementById('output').value = document.getElementById('output').value.slice(0,-1) "
+                id="erase">
+            <input value="9" type="button" onclick="document.getElementById('output').value += '9'">
+            <input value="8" type="button" onclick="document.getElementById('output').value += '8'">
+            <input value="7" type="button" onclick="document.getElementById('output').value += '7'">
+            <input value="+" type="button" onclick="document.getElementById('output').value += '+'">
+            <input value="6" type="button" onclick="document.getElementById('output').value += '6'">
+            <input value="5" type="button" onclick="document.getElementById('output').value += '5'">
+            <input value="4" type="button" onclick="document.getElementById('output').value += '4'">
+            <input value="-" type="button" onclick="document.getElementById('output').value += '-'">
+            <input value="3" type="button" onclick="document.getElementById('output').value += '3'">
+            <input value="2" type="button" onclick="document.getElementById('output').value += '2'">
+            <input value="1" type="button" onclick="document.getElementById('output').value += '1'">
+            <input value="*" type="button" onclick="document.getElementById('output').value += '*'">
+            <input value="0" type="button" onclick="document.getElementById('output').value += '0'">
+            <input value="." type="button" onclick="document.getElementById('output').value += '.'">
+            <input value="00" type="button" onclick="document.getElementById('output').value += '00'">
+            <input value="/" type="button" onclick="document.getElementById('output').value += '/'">
+
+            <input value="=" type="button"
+                onclick="document.getElementById('output').value = eval(document.getElementById('output').value)">
+        </section>
+    </section>
+
+</body>
+
+</html>
